@@ -3,6 +3,12 @@
 > 研究日期：2026-03-15  
 > 研究对象：AutoClaw、KimiQClaw（含 Kimi Claw 相关命名）、MaxClaw、QClaw（OpenClaw 作为基准）
 
+## 快照归档（自动更新）
+
+<!-- SNAPSHOT:LIST_START -->
+- [数据快照-2026-03-15](数据快照-2026-03-15.md)
+<!-- SNAPSHOT:LIST_END -->
+
 ---
 
 ## 1. 研究方法与证据分级

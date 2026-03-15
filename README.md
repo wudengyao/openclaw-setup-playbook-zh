@@ -37,6 +37,7 @@
 - [Kimi Claw 介绍页](https://www.kimi.com/resources/kimi-claw-introduction)
 - [MaxClaw 官网](https://maxclaw.ai/)
 - [QClaw 官网（腾讯）](https://qclaw.qq.com/)
+- [大厂对比每周快照归档](大厂龙虾对比/README.md)
 
 
 
