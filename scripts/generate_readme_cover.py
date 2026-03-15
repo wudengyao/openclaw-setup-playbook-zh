@@ -3,82 +3,110 @@ from pathlib import Path
 
 W, H = 1600, 560
 img = Image.new("RGB", (W, H), "#0b0c10")
+from PIL import Image, ImageDraw, ImageFont
+from pathlib import Path
+import random
+
+W, H = 1366, 402
+img = Image.new("RGB", (W, H), "#07090f")
 d = ImageDraw.Draw(img)
 
-# background blocks
-for i in range(0, H, 4):
-    c = 11 + (i % 24)
-    d.line((0, i, W, i), fill=(c, c, c + 6), width=1)
+# 背景渐变（左偏紫红 -> 右偏深蓝）
+for x in range(W):
+    t = x / (W - 1)
+    r = int(22 * (1 - t) + 0 * t)
+    g = int(8 * (1 - t) + 25 * t)
+    b = int(28 * (1 - t) + 35 * t)
+    d.line((x, 0, x, H), fill=(r, g, b))
 
-# left panel
-d.rounded_rectangle((80, 70, 560, 490), radius=70, fill="#1a1020", outline="#36263f", width=3)
+# 大范围柔光
+overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+od = ImageDraw.Draw(overlay)
+for cx, cy, rad, color in [
+    (110, 220, 290, (255, 65, 85, 70)),
+    (1240, 260, 320, (0, 220, 210, 60)),
+    (680, 90, 210, (120, 0, 255, 35)),
+]:
+    for i in range(rad, 0, -6):
+        a = int(color[3] * (i / rad) ** 2)
+        od.ellipse((cx - i, cy - i, cx + i, cy + i), fill=(color[0], color[1], color[2], a))
+img = Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
+d = ImageDraw.Draw(img)
 
-# simple lobster icon
-cx, cy = 320, 280
-d.ellipse((cx - 95, cy - 105, cx + 95, cy + 105), fill="#ff4f57")
-d.ellipse((cx - 70, cy - 175, cx + 70, cy - 55), fill="#ff6167")
-d.ellipse((cx - 42, cy - 126, cx - 18, cy - 102), fill="#121826")
-d.ellipse((cx + 18, cy - 126, cx + 42, cy - 102), fill="#121826")
-d.ellipse((cx - 36, cy - 120, cx - 28, cy - 112), fill="#4affdf")
-d.ellipse((cx + 24, cy - 120, cx + 32, cy - 112), fill="#4affdf")
-d.line((cx - 20, cy - 176, cx - 62, cy - 202), fill="#ff8a8f", width=6)
-d.line((cx + 20, cy - 176, cx + 62, cy - 202), fill="#ff8a8f", width=6)
-d.ellipse((cx - 145, cy - 66, cx - 78, cy + 2), fill="#f14952")
-d.ellipse((cx + 78, cy - 66, cx + 145, cy + 2), fill="#f14952")
-d.rectangle((cx - 40, cy + 90, cx - 14, cy + 136), fill="#df3f48")
-d.rectangle((cx + 14, cy + 90, cx + 40, cy + 136), fill="#df3f48")
+# 星点
+random.seed(42)
+for _ in range(22):
+    x = random.randint(20, W - 20)
+    y = random.randint(16, H - 24)
+    r = random.choice([1, 1, 2])
+    col = random.choice([(255, 255, 255), (110, 250, 255), (255, 120, 140)])
+    d.ellipse((x - r, y - r, x + r, y + r), fill=col)
 
-# fonts
+# 吉祥物外发光
+overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+od = ImageDraw.Draw(overlay)
+cx, cy = 680, 95
+for i in range(145, 0, -4):
+    a = int(80 * (i / 145) ** 2)
+    od.ellipse((cx - i, cy - i, cx + i, cy + i), fill=(255, 40, 70, a))
+img = Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
+d = ImageDraw.Draw(img)
+
+# 吉祥物（简化龙虾风）
+d.ellipse((cx - 88, cy - 78, cx + 88, cy + 92), fill="#ff4f57")
+d.ellipse((cx - 58, cy - 126, cx + 58, cy - 30), fill="#ff5d64")
+d.ellipse((cx - 36, cy - 68, cx - 14, cy - 46), fill="#121826")
+d.ellipse((cx + 14, cy - 68, cx + 36, cy - 46), fill="#121826")
+d.ellipse((cx - 31, cy - 63, cx - 24, cy - 56), fill="#4affdf")
+d.ellipse((cx + 20, cy - 63, cx + 27, cy - 56), fill="#4affdf")
+d.line((cx - 18, cy - 122, cx - 44, cy - 145), fill="#ff8087", width=5)
+d.line((cx + 18, cy - 122, cx + 44, cy - 145), fill="#ff8087", width=5)
+d.ellipse((cx - 97, cy - 36, cx - 54, cy + 8), fill="#ef4651")
+d.ellipse((cx + 54, cy - 36, cx + 97, cy + 8), fill="#ef4651")
+d.rectangle((cx - 20, cy + 72, cx - 2, cy + 96), fill="#e2424b")
+d.rectangle((cx + 2, cy + 72, cx + 20, cy + 96), fill="#e2424b")
+
+# 字体
 font_candidates = [
     "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
     "/System/Library/Fonts/Supplemental/Arial.ttf",
 ]
 
-def pick_font(size):
+
+def pick_font(size: int):
     for p in font_candidates:
-        fp = Path(p)
-        if fp.exists():
-            return ImageFont.truetype(str(fp), size)
+        if Path(p).exists():
+            try:
+                return ImageFont.truetype(p, size)
+            except Exception:
+                pass
     return ImageFont.load_default()
 
-f1 = pick_font(76)
-f2 = pick_font(58)
-f3 = pick_font(34)
-f4 = pick_font(27)
 
-x = 650
-d.text((x, 108), "OpenClaw", font=f1, fill="#ff5a64")
-d.text((x + 408, 112), "🦞", font=f3, fill="#ff7f50")
+# OpenClaw 渐变字
+text = "OpenClaw"
+font = pick_font(108)
+mask = Image.new("L", (W, H), 0)
+md = ImageDraw.Draw(mask)
+text_w = int(md.textlength(text, font=font))
+text_x = (W - text_w) // 2
+text_y = 255
+md.text((text_x, text_y), text, font=font, fill=255)
 
-# strike-through old names
-for y, txt in [(170, "Moltbot"), (220, "Clawdbot")]:
-    d.text((x + 6, y), txt, font=f3, fill="#ff7179")
-    tw = d.textlength(txt, font=f3)
-    d.line((x + 2, y + 20, x + tw + 20, y + 6), fill="#f2f4f8", width=7)
+grad = Image.new("RGB", (W, H), 0)
+gd = ImageDraw.Draw(grad)
+for x in range(W):
+    t = (x - text_x) / max(1, text_w)
+    t = max(0.0, min(1.0, t))
+    r = int(233 + (255 - 233) * t)
+    g = int(171 + (74 - 171) * t)
+    b = int(190 + (87 - 190) * t)
+    gd.line((x, 0, x, H), fill=(r, g, b))
+img.paste(grad, mask=mask)
 
-d.text((x, 278), "Skills Collection", font=f2, fill="#f7f8fb")
-d.text((x, 350), "社区技能全量快照 · 分类索引 · 一键检索", font=f3, fill="#ccd1db")
-
-# badges
-badges = [
-    ("awesome", "#45355e", "#ffffff"),
-    ("AI Agent Engineering", "#123943", "#85ffe6"),
-    ("skills 5400+", "#15679f", "#e9f4ff"),
-    ("updated 2026-03-15", "#2f8642", "#eaffef"),
-]
-
-bx, by = x, 410
-for text, bg, fg in badges:
-    bw = int(d.textlength(text, font=f4) + 34)
-    d.rounded_rectangle((bx, by, bx + bw, by + 44), radius=10, fill=bg)
-    d.text((bx + 16, by + 8), text, font=f4, fill=fg)
-    bx += bw + 12
-
-# brand
-d.text((1260, 490), "voltagent inspired", font=pick_font(36), fill="#19ddb1")
-
-# border
-d.rounded_rectangle((18, 18, W - 18, H - 18), radius=16, outline="#252831", width=2)
+# 细边框
+d = ImageDraw.Draw(img)
+d.rectangle((0, 0, W - 1, H - 1), outline="#1b2330", width=2)
 
 out_dir = Path("/Users/wudengyao/openclaw-setup-playbook-zh/assets")
 out_dir.mkdir(parents=True, exist_ok=True)
