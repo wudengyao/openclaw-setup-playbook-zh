@@ -1,5 +1,7 @@
 # OpenClaw 中文安装与实战教程（龙虾大学）
 
+![OpenClaw Skills Cover](assets/readme-cover-openclaw-skills.png)
+
 > 更新时间：2026-03-15  
 > 目标：帮你从 0 到 1 完成 OpenClaw 安装、部署、上线、日常使用，并附带高质量实战案例。
 
