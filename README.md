@@ -3,31 +3,6 @@
 > 更新时间：2026-03-15  
 > 目标：帮你从 0 到 1 完成 OpenClaw 安装、部署、上线、日常使用，并附带高质量实战案例。
 
-## 🌐 在线阅读站点（已集成）
-
-项目已集成 **Docsify** 在线文档站（无需构建，直接托管）。
-
-### 站点地址
-
-启用 GitHub Pages 后可访问：
-
-- `https://wudengyao.github.io/openclaw-setup-playbook-zh/`
-
-示例章节：
-
-- `https://wudengyao.github.io/openclaw-setup-playbook-zh/#/cn/adopt/chapter2.md`
-
-### 一次性启用步骤
-
-1. 打开仓库 `Settings -> Pages`
-2. `Source` 选择 `Deploy from a branch`
-3. Branch 选择 `main`
-4. Folder 选择 `/docs`
-5. 保存，等待 1~3 分钟
-
-> 已添加 `docs/index.html`、`docs/_sidebar.md`、`docs/.nojekyll`。
-
----
 
 ## 📚 你将获得什么
 
