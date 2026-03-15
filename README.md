@@ -16,8 +16,6 @@
 - [社区 40 例（awesome-openclaw-usecases）](全网实战案例/awesome-openclaw-usecases-40例.md)
 - [官方 Showcase 汇总（docs.openclaw.ai）](全网实战案例/official-showcase-案例汇总.md)
 
-> 线上访问（GitHub Pages）  
-> https://wudengyao.github.io/openclaw-setup-playbook-zh/
 
 ## 🚀 最短路径（3 分钟）
 
