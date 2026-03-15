@@ -1,1 +1,59 @@
 site_name: OpenClaw 中文安装与实战教程
+site_description: OpenClaw 安装部署、运维与实战案例中文文档
+site_url: https://wudengyao.github.io/openclaw-setup-playbook-zh/
+repo_url: https://github.com/wudengyao/openclaw-setup-playbook-zh
+repo_name: wudengyao/openclaw-setup-playbook-zh
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: orange
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - 首页: index.md
+  - 中文文档:
+      - 导航: cn/index.md
+      - 安装与快速上手:
+          - 第1章：安装与初始化: cn/install/chapter1.md
+      - 部署与运维:
+          - 第2章：部署与运维实战: cn/adopt/chapter2.md
+      - 实战案例:
+          - 第3章：龙虾实战案例: cn/usecases/chapter3.md
+      - 安全实践:
+          - 第4章：安全与最佳实践: cn/security/chapter4.md
