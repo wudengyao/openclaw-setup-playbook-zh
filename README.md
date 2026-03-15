@@ -3,7 +3,30 @@
 ![OpenClaw Skills Cover](assets/fm.png)
 
 > 更新时间：2026-03-15  
-> 目标：帮你从 0 到 1 完成 OpenClaw 安装、部署、上线、日常使用，并附带高质量实战案例。
+> 目标：帮你从 0 到 1 完成 OpenClaw 安装、部署、上线、日常使用，并附带高质量实战案例。  
+> 封面图：严格使用上传原图本体（`assets/fm.png`，未做风格复刻）。
+
+## 📊 项目数据看板（本仓库）
+
+![awesome](https://img.shields.io/badge/awesome-openclaw-7b68ee?style=for-the-badge)
+![community usecases](https://img.shields.io/badge/community%20usecases-40-0ea5e9?style=for-the-badge)
+![official showcase](https://img.shields.io/badge/official%20showcase-40%2B-f97316?style=for-the-badge)
+![skills categories mirrored](https://img.shields.io/badge/skills%20categories%20mirrored-30-22c55e?style=for-the-badge)
+![skills ecosystem](https://img.shields.io/badge/skills%20ecosystem-5400%2B-06b6d4?style=for-the-badge)
+![last sync](https://img.shields.io/badge/last%20sync-2026--03--15-64748b?style=for-the-badge)
+
+### 数据说明（这些开源项目常见怎么做）
+
+- 徽章展示：通常使用 Shields 风格徽章，把关键数字直接展示在 README 顶部。
+- 数据来源：来自仓库内已落地内容（本仓库镜像文件）+ 上游公开声明（例如 5400+）。
+- 维护方式：常见做法是“脚本统计 + 定时更新（GitHub Actions）”；本仓库已先完成首版手工采集落地。
+
+### 本仓库当前口径
+
+- 社区案例：40（来源：`全网实战案例/awesome-openclaw-usecases-40例.md`）
+- 官方案例：40+（来源：`全网实战案例/official-showcase-案例汇总.md`）
+- skills 分类镜像：30 类（来源：`全网实战案例/skills-categories/`）
+- skills 生态规模：5400+（来源：`全网实战案例/awesome-openclaw-skills-全网实战索引.md`）
 
 ## 📚 你将获得什么
 
