@@ -10,14 +10,7 @@
 - 一份精选“龙虾（OpenClaw）实战案例集”
 - 一份可继续维护的开源文档结构
 
-## 📂 文档导航
-
-- [01-安装与快速上手](docs/01-install-and-quickstart.md)
-- [02-部署与运维（含 Docker）](docs/02-deployment-and-ops.md)
-- [03-龙虾实战案例集](docs/03-lobster-use-cases.md)
-- [04-安全与最佳实践](docs/04-security-best-practices.md)
-
-## 🌐 全网实战案例（新）
+## 🌐 全网实战案例
 
 - [全网实战案例总览](全网实战案例/README.md)
 - [社区 40 例（awesome-openclaw-usecases）](全网实战案例/awesome-openclaw-usecases-40例.md)
@@ -46,6 +39,13 @@
 - Telegram 渠道：https://docs.openclaw.ai/channels/telegram
 - WebChat：https://docs.openclaw.ai/web/webchat
 - Showcase：https://docs.openclaw.ai/start/showcase
+
+## 📂 文档导航
+
+- [01-安装与快速上手](docs/01-install-and-quickstart.md)
+- [02-部署与运维（含 Docker）](docs/02-deployment-and-ops.md)
+- [03-龙虾实战案例集](docs/03-lobster-use-cases.md)
+- [04-安全与最佳实践](docs/04-security-best-practices.md)
 
 ### 社区
 - Awesome OpenClaw Use Cases：https://github.com/hesamsheikh/awesome-openclaw-usecases
