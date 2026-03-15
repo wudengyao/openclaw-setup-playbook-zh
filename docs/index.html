@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenClaw 中文安装与实战教程</title>
+    <meta name="description" content="OpenClaw 中文安装部署、运维与实战案例在线文档" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+    <style>
+      :root {
+        --theme-color: #ff6d00;
+      }
+      .sidebar > h1 a {
+        color: #ff6d00;
+      }
+      .content {
+        padding-top: 8px;
+      }
+      .markdown-section h2 {
+        border-left: 4px solid #ffb74d;
+        padding-left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">文档加载中...</div>
+    <script>
+      window.$docsify = {
+        name: 'OpenClaw 中文安装与实战教程',
+        repo: 'https://github.com/wudengyao/openclaw-setup-playbook-zh',
+        loadSidebar: true,
+        subMaxLevel: 3,
+        auto2top: true,
+        homepage: 'index.md',
+        alias: {
+          '/.*/_sidebar.md': '/_sidebar.md'
+        },
+        search: {
+          maxAge: 86400000,
+          paths: 'auto',
+          placeholder: '搜索文档',
+          noData: '未找到结果',
+          depth: 4
+        }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+  </body>
+</html>

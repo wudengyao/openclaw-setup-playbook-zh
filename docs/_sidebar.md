@@ -1,0 +1,12 @@
+- [首页](/)
+- 中文文档
+  - [导航页](/cn/index.md)
+  - [第1章：安装与初始化](/cn/install/chapter1.md)
+  - [第2章：部署与运维实战](/cn/adopt/chapter2.md)
+  - [第3章：龙虾实战案例](/cn/usecases/chapter3.md)
+  - [第4章：安全与最佳实践](/cn/security/chapter4.md)
+- 原始教程（仓库版）
+  - [01-安装与快速上手](/01-install-and-quickstart.md)
+  - [02-部署与运维（含 Docker）](/02-deployment-and-ops.md)
+  - [03-龙虾实战案例集](/03-lobster-use-cases.md)
+  - [04-安全与最佳实践](/04-security-best-practices.md)
