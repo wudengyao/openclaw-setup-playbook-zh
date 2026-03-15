@@ -11,13 +11,7 @@
 ![skills ecosystem](https://img.shields.io/badge/skills%20ecosystem-5400%2B-06b6d4?style=for-the-badge)
 ![last sync](https://img.shields.io/badge/last%20sync-2026--03--15-64748b?style=for-the-badge)
 
-### 数据说明（这些开源项目常见怎么做）
-
-- 徽章展示：通常使用 Shields 风格徽章，把关键数字直接展示在 README 顶部。
-- 数据来源：来自仓库内已落地内容（本仓库镜像文件）+ 上游公开声明（例如 5400+）。
-- 维护方式：常见做法是“脚本统计 + 定时更新（GitHub Actions）”；本仓库已先完成首版手工采集落地。
-
-### 本仓库当前口径
+### 数据说明
 
 - 社区案例：40（来源：`全网实战案例/awesome-openclaw-usecases-40例.md`）
 - 官方案例：40+（来源：`全网实战案例/official-showcase-案例汇总.md`）
