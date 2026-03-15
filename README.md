@@ -21,12 +21,9 @@
 
 ---
 
-## 🌐 全网实战案例（首页展开版）
+## 🌐 全网实战案例
 
-> 在线访问（GitHub Pages）  
-> https://wudengyao.github.io/openclaw-setup-playbook-zh/
-
-### 总入口
+### 目录
 
 - [全网实战案例总览](全网实战案例/README.md)
 - [社区 40 例（awesome-openclaw-usecases）](全网实战案例/awesome-openclaw-usecases-40例.md)
@@ -36,7 +33,7 @@
 
 ---
 
-### A) 社区 40 例（按分类全部展开）
+### A) 社区案例 40 例
 
 #### 1. 社交媒体（5）
 
@@ -59,7 +56,7 @@
 11. n8n Workflow Orchestration（n8n 工作流编排）  
 12. Self-Healing Home Server（自愈家庭服务器）
 
-#### 4. 生产力（20）
+#### 4. 办公协作（20）
 
 13. Autonomous Project Management（自主项目管理）  
 14. Multi-Channel AI Customer Service（多渠道 AI 客服）  
@@ -98,7 +95,7 @@
 
 ---
 
-### B) 官方 Showcase（按版块全部展开）
+### B) 官方案例 Showcase
 
 #### 1. Fresh from Discord
 
