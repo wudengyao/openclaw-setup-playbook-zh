@@ -2,7 +2,10 @@
 
 ![OpenClaw Skills Cover](assets/fm.png)
 
+> 更新时间：2026-03-15  
 > 目标：帮你从 0 到 1 完成 OpenClaw 安装、部署、上线、日常使用，并附带高质量实战案例。  
+
+## 📊 项目数据看板（自动更新）
 
 ![awesome](https://img.shields.io/badge/awesome-openclaw-7b68ee?style=for-the-badge)
 ![community usecases](https://img.shields.io/badge/community%20usecases-40-0ea5e9?style=for-the-badge)

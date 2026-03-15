@@ -1,0 +1,37 @@
+name: Update README Metrics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 2 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-metrics:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Update README metrics
+        run: python scripts/update_readme_metrics.py
+
+      - name: Commit and push if changed
+        run: |
+          if [[ -n "$(git status --porcelain README.md)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: auto-update README metrics"
+            git push
+          else
+            echo "No README metric changes"
+          fi
