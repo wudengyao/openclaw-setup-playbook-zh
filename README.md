@@ -3,19 +3,53 @@
 > 更新时间：2026-03-15  
 > 目标：帮你从 0 到 1 完成 OpenClaw 安装、部署、上线、日常使用，并附带高质量实战案例。
 
+## 🌐 在线阅读站点（已集成）
+
+项目已集成 **Docsify** 在线文档站（无需构建，直接托管）。
+
+### 站点地址
+
+启用 GitHub Pages 后可访问：
+
+- `https://wudengyao.github.io/openclaw-setup-playbook-zh/`
+
+示例章节：
+
+- `https://wudengyao.github.io/openclaw-setup-playbook-zh/#/cn/adopt/chapter2.md`
+
+### 一次性启用步骤
+
+1. 打开仓库 `Settings -> Pages`
+2. `Source` 选择 `Deploy from a branch`
+3. Branch 选择 `main`
+4. Folder 选择 `/docs`
+5. 保存，等待 1~3 分钟
+
+> 已添加 `docs/index.html`、`docs/_sidebar.md`、`docs/.nojekyll`。
+
+---
+
 ## 📚 你将获得什么
 
 - 一份可直接执行的安装部署手册（macOS / Linux / Windows WSL2 / Docker）
 - 一套生产可用的运维检查清单（健康检查、安全配置、常见问题）
-- 一份精选“龙虾（OpenClaw）实战案例集”
+- 一份精选“龙虾（OpenClaw）”实战案例集
 - 一份可继续维护的开源文档结构
 
-## 📂 文档导航
+## 📂 文档导航（仓库）
 
 - [01-安装与快速上手](docs/01-install-and-quickstart.md)
 - [02-部署与运维（含 Docker）](docs/02-deployment-and-ops.md)
 - [03-龙虾实战案例集](docs/03-lobster-use-cases.md)
 - [04-安全与最佳实践](docs/04-security-best-practices.md)
+
+## 📘 文档导航（在线阅读结构）
+
+- [中文导航](docs/cn/index.md)
+- [第1章：安装与初始化](docs/cn/install/chapter1.md)
+- [第2章：部署与运维实战](docs/cn/adopt/chapter2.md)
+- [第3章：龙虾实战案例](docs/cn/usecases/chapter3.md)
+- [第4章：安全与最佳实践](docs/cn/security/chapter4.md)
 
 ## 🚀 最短路径（3 分钟）
 
