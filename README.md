@@ -34,6 +34,7 @@
 - [02-部署与运维（含 Docker）](docs/02-deployment-and-ops.md)
 - [03-龙虾实战案例集](docs/03-lobster-use-cases.md)
 - [04-安全与最佳实践](docs/04-security-best-practices.md)
+- [05-大厂龙虾对比研究](大厂龙虾对比/README.md)
 
 ---
 
@@ -46,6 +47,7 @@
 - [官方 Showcase 汇总（docs.openclaw.ai）](全网实战案例/official-showcase-案例汇总.md)
 - [skills 分类镜像总索引（可检索）](全网实战案例/skills-categories-总索引.md)
 - [skills 分类镜像目录](全网实战案例/skills-categories/)
+- [大厂龙虾对比研究](大厂龙虾对比/README.md)
 
 ---
 
