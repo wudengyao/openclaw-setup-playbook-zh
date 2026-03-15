@@ -13,6 +13,8 @@
 - [社区 40 例（按分类整理）](awesome-openclaw-usecases-40例.md)
 - [官方 Showcase 汇总](official-showcase-案例汇总.md)
 - [VoltAgent 全网技能实战索引（5400+）](awesome-openclaw-skills-全网实战索引.md)
+- [skills 分类镜像总索引（可检索）](skills-categories-总索引.md)
+- [skills 分类镜像目录](skills-categories/)
 
 ## 更新策略
 
