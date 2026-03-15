@@ -3,28 +3,28 @@
 > 更新时间：2026-03-15  
 > 目标：帮你从 0 到 1 完成 OpenClaw 安装、部署、上线、日常使用，并附带高质量实战案例。
 
-
 ## 📚 你将获得什么
 
 - 一份可直接执行的安装部署手册（macOS / Linux / Windows WSL2 / Docker）
 - 一套生产可用的运维检查清单（健康检查、安全配置、常见问题）
-- 一份精选“龙虾（OpenClaw）”实战案例集
+- 一份精选“龙虾（OpenClaw）实战案例集”
 - 一份可继续维护的开源文档结构
 
-## 📂 文档导航（仓库）
+## 📂 文档导航
 
 - [01-安装与快速上手](docs/01-install-and-quickstart.md)
 - [02-部署与运维（含 Docker）](docs/02-deployment-and-ops.md)
 - [03-龙虾实战案例集](docs/03-lobster-use-cases.md)
 - [04-安全与最佳实践](docs/04-security-best-practices.md)
 
-## 📘 文档导航（在线阅读结构）
+## 🌐 全网实战案例（新）
 
-- [中文导航](docs/cn/index.md)
-- [第1章：安装与初始化](docs/cn/install/chapter1.md)
-- [第2章：部署与运维实战](docs/cn/adopt/chapter2.md)
-- [第3章：龙虾实战案例](docs/cn/usecases/chapter3.md)
-- [第4章：安全与最佳实践](docs/cn/security/chapter4.md)
+- [全网实战案例总览](全网实战案例/README.md)
+- [社区 40 例（awesome-openclaw-usecases）](全网实战案例/awesome-openclaw-usecases-40例.md)
+- [官方 Showcase 汇总（docs.openclaw.ai）](全网实战案例/official-showcase-案例汇总.md)
+
+> 线上访问（GitHub Pages）  
+> https://wudengyao.github.io/openclaw-setup-playbook-zh/
 
 ## 🚀 最短路径（3 分钟）
 
